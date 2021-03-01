@@ -69,8 +69,10 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="SearchEvent.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
+    <Content Include="CreateEvent.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
@@ -83,9 +85,31 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Master1.Master.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master1.Master.designer.cs">
+      <DependentUpon>Master1.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchEvent.aspx.cs">
+      <DependentUpon>SearchEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchEvent.aspx.designer.cs">
+      <DependentUpon>SearchEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.designer.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Master1.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -96,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

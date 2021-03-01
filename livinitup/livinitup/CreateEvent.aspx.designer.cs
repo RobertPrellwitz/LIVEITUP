@@ -11,7 +11,7 @@ namespace livinitup
 {
 
 
-    public partial class SearchEvent
+    public partial class WebForm1
     {
     }
 }

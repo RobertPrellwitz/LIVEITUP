@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
     </style>
 </head>
-<body style="background-color:darkseagreen">
+<body style="background-color:lightcyan">
     <form id="form1" runat="server">
         <div>
             
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
         <table class="auto-style3">
             <tr>
                 <td>
-                    <asp:Menu ID="Menu1" runat="server">
+                    <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Size="X-Large" Height="250px" StaticSubMenuIndent="16px">
                         <Items>
                             <asp:MenuItem NavigateUrl="Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="CreateEvent.aspx" Text="Event Creation" Value="New Item"></asp:MenuItem>
@@ -95,13 +95,24 @@ h1, h2, h3, h4, h5, h6 {
                             &nbsp;</p>
                     </asp:ContentPlaceHolder>
                 </td>
-                <td rowspan="2">&nbsp;</td>
+                <td rowspan="2">
+                    <asp:Label class="text-success" ID="lblEvent1" runat="server" Text="Event 1 (Short Description)"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label class="text-success" ID="lblEvent2" runat="server" Text="Event 2 (Short Description)"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label class="text-success" ID="lblEvent3" runat="server" Text="Event 3 (Short Description)"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label class="text-success" ID="lblEvent4" runat="server" Text="Event 4 (Short Description)"></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="3">Copyright 2021 CR Productions</td>
+                <td colspan="3" class="text-center text-info">Copyright 2021 CR Productions</td>
             </tr>
         </table>
     </form>

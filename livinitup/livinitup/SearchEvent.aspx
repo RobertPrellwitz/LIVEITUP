@@ -50,6 +50,9 @@
             <td>
                 <p class="auto-style12">
                     <asp:TextBox ID="txtLocation" runat="server"></asp:TextBox>
+                    <strong>
+                    <asp:Label ID="lblZipError" runat="server"></asp:Label>
+                    </strong>
                 </p>
             </td>
         </tr>
@@ -73,7 +76,7 @@
         </tr>
         <tr>
             <td colspan="5">
-                <asp:Button ID="btnSearch" runat="server" Text="Search" Width="123px" />
+                <asp:Button ID="btnSearch" runat="server" Text="Search" Width="123px" OnClick="btnSearch_Click" />
             </td>
         </tr>
     </table>

@@ -13,5 +13,32 @@ namespace livinitup
         {
 
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            bool verify = true;
+            String password = txtPassword.Text;
+            String confirmPassword = txtPasswordConfirm.Text;
+
+            // email input validation
+            bool email = TxtEmail.Text == string.Empty;
+            lblEmail.Text = email ? "Please enter a valid email address" : string.Empty;
+
+
+            // password validation
+            LblPassword.Text = (password.Length < 6) ? "Password not long enough - Your Password must have 6 characters " : "Password length criteria met";
+            bool result = password.Equals(confirmPassword);
+            LblPasswordConfirm.Text = (result ? "Passwords Match" : "Passwords do not Match");
+
+            // final validation
+            verify = (!email && result && password.Length > 5);
+
+            //page redirct upon validation
+            if (verify)
+            {
+                Response.Redirect("Default.aspx");
+            }
+
+        }
     }
 }

@@ -49,25 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
 }
 
-        .auto-style3 {
-            width: 100%;
-        }
-        .auto-style4 {
-            width: 410px;
-        }
-        .auto-style5 {
-            width: 1350px;
-            align-content:center;
-            text-align:center;
-            
-        }
-
-         .auto-style7 {
-             width:900px;
-            height: 750px;
-        }
-
-    </style>
+        </style>
 </head>
 <body style="background-color:lightcyan">
     <form id="form1" runat="server">
@@ -96,16 +78,29 @@ h1, h2, h3, h4, h5, h6 {
                     </asp:ContentPlaceHolder>
                 </td>
                 <td rowspan="2">
-                    <asp:Label class="text-success" ID="lblEvent1" runat="server" Text="Event 1 (Short Description)"></asp:Label>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
+                            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+                        </Columns>
+                        <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+                        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+                        <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+                        <RowStyle BackColor="White" ForeColor="#330099" />
+                        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+                        <SortedAscendingCellStyle BackColor="#FEFCEB" />
+                        <SortedAscendingHeaderStyle BackColor="#AF0101" />
+                        <SortedDescendingCellStyle BackColor="#F6F0C0" />
+                        <SortedDescendingHeaderStyle BackColor="#7E0000" />
+                    </asp:GridView>
+                    <br />
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [Date], [Description], [Type] FROM [Event]"></asp:SqlDataSource>
                     <br />
                     <br />
-                    <asp:Label class="text-success" ID="lblEvent2" runat="server" Text="Event 2 (Short Description)"></asp:Label>
                     <br />
                     <br />
-                    <asp:Label class="text-success" ID="lblEvent3" runat="server" Text="Event 3 (Short Description)"></asp:Label>
                     <br />
-                    <br />
-                    <asp:Label class="text-success" ID="lblEvent4" runat="server" Text="Event 4 (Short Description)"></asp:Label>
                 </td>
             </tr>
             <tr>

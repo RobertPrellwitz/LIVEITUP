@@ -39,6 +39,8 @@ namespace livinitup
                 bool vir = cbxVirtual.Checked;
                 bool priv = cbxPrivate.Checked;
                 String eventDescription = txtEventDescription.Text;
+                int userID = 2;
+                int interestID = 1;
 
                 btnCreateEvent.Text = "Success!";
 
@@ -49,8 +51,9 @@ namespace livinitup
                     string connString =
                     ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                     conn = new SqlConnection(connString);
-                    var query = String.Format("INSERT INTO [Event] ([EventName], [Description], [ZipCode]) VALUES('{0}', '{1}', '{2})", 
-                        eventName, eventDescription, eventZipCode);
+                    var query = String.Format("INSERT INTO [Event] ([Type], [Description], " +
+                        "[Zip], [InterestID], [UserID]) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", 
+                        eventName, eventDescription, eventZipCode, interestID, userID);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();

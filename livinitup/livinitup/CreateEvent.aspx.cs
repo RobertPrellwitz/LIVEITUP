@@ -11,9 +11,13 @@ namespace livinitup
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        int userID = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             lblError.Text = "";
+            if (Session["userId"] != null) {
+                userID = (int)Session["userId"];
+            }
         }
 
         protected void btnCreateEvent_Click(object sender, EventArgs e)
@@ -39,7 +43,7 @@ namespace livinitup
                 bool vir = cbxVirtual.Checked;
                 bool priv = cbxPrivate.Checked;
                 String eventDescription = txtEventDescription.Text;
-                int userID = 2;
+                //int userID = 2;
                 int interestID = 1;
 
                 btnCreateEvent.Text = "Success!";
@@ -52,8 +56,8 @@ namespace livinitup
                     ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                     conn = new SqlConnection(connString);
                     var query = String.Format("INSERT INTO [Event] ([Type], [Description], " +
-                        "[Zip], [InterestID], [UserID]) VALUES('{0}', '{1}', '{2}', '{3}', '{4}')", 
-                        eventName, eventDescription, eventZipCode, interestID, userID);
+                        "[Zip], [InterestID], [UserID], [Date]) VALUES('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", 
+                        eventName, eventDescription, eventZipCode, interestID, userID, eventDate);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();

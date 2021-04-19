@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
                             <asp:MenuItem NavigateUrl="CreateEvent.aspx" Text="Event Creation" Value="New Item"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="SearchEvent.aspx" Text="Search Events" Value="Search Events"></asp:MenuItem>
                             <asp:MenuItem NavigateUrl="Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
                         </Items>
                     </asp:Menu>
                 </td>

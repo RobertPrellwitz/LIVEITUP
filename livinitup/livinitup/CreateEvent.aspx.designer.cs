@@ -69,15 +69,6 @@ namespace livinitup
         protected global::System.Web.UI.WebControls.TextBox txtEventLocation;
 
         /// <summary>
-        /// txtKeyWord control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeyWord;
-
-        /// <summary>
         /// ddlinterest control.
         /// </summary>
         /// <remarks>
@@ -94,24 +85,6 @@ namespace livinitup
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-
-        /// <summary>
-        /// cbxVirtual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxVirtual;
-
-        /// <summary>
-        /// cbxPrivate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxPrivate;
 
         /// <summary>
         /// txtEventDescription control.

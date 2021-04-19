@@ -165,10 +165,9 @@
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style6"><span class="auto-style28">*</span>Interest/Keyword:&nbsp; </td>
+        <td class="auto-style6">&nbsp;</td>
         <td class="auto-style12" colspan="2">
-            <asp:TextBox ID="txtKeyWord" runat="server"></asp:TextBox>
-        </td>
+            &nbsp;</td>
         <td class="auto-style30">
             &nbsp;</td>
     </tr>
@@ -183,25 +182,23 @@
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style6">Virtual Event ?</td>
+        <td class="auto-style6">&nbsp;</td>
         <td class="auto-style12" colspan="2">
-            <asp:CheckBox ID="cbxVirtual" runat="server" />
-        </td>
+            &nbsp;</td>
         <td class="auto-style29">
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style6">Private Event?</td>
+        <td class="auto-style6">&nbsp;</td>
         <td class="auto-style12" colspan="2">
-            <asp:CheckBox ID="cbxPrivate" runat="server" />
-        </td>
+            &nbsp;</td>
         <td class="auto-style29">
             &nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style17">Event Description: </td>
         <td class="auto-style18" colspan="2">
-            <asp:TextBox ID="txtEventDescription" runat="server" Height="127px" Width="231px"></asp:TextBox>
+            <asp:TextBox ID="txtEventDescription" runat="server" Height="50px" Width="324px"></asp:TextBox>
         </td>
         <td class="auto-style19">
             </td>

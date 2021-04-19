@@ -24,8 +24,8 @@ namespace livinitup
         {
             try
             {   //Mare sure all required fields are filled
-                if (txtEventName.Text == string.Empty || txtEventDate.Text == string.Empty || txtEventLocation.Text == string.Empty
-                    || txtKeyWord.Text == string.Empty) throw new Exception("must fill all required fields");
+                if (txtEventName.Text == string.Empty || txtEventDate.Text == string.Empty || txtEventLocation.Text == string.Empty)
+                    throw new Exception("must fill all required fields");
                 //Make sure Date is in proper format
                 DateTime result;
                 if (!DateTime.TryParse(txtEventDate.Text, out result))
@@ -39,11 +39,10 @@ namespace livinitup
                 String eventZipCode = txtEventLocation.Text;
                 if (eventZipCode.Length != 5)
                     throw new Exception("Enter a valid Zip Code. ex 12345");
-                String keyword = txtKeyWord.Text;
-                bool vir = cbxVirtual.Checked;
-                bool priv = cbxPrivate.Checked;
+                //String keyword = txtKeyWord.Text;
+               // bool vir = cbxVirtual.Checked;
+               // bool priv = cbxPrivate.Checked;
                 String eventDescription = txtEventDescription.Text;
-                //int userID = 2;
                 int interestID = ddlinterest.SelectedIndex + 1;
 
                 btnCreateEvent.Text = "Success!";
@@ -70,6 +69,7 @@ namespace livinitup
                 finally
                 {
                     conn.Close();
+                    Response.Redirect("Default.aspx");
 
                 }
             }

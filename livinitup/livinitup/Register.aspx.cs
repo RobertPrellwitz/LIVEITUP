@@ -61,7 +61,8 @@ namespace livinitup
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
 
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Login.aspx");
+
 
                 }
                 catch (Exception except) {

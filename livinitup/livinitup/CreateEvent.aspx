@@ -140,7 +140,7 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style6"><span class="auto-style28">*</span>Event Location:&nbsp; </td>
+        <td class="auto-style6"><span class="auto-style28">*</span>Event Zipcode:&nbsp; </td>
         <td class="auto-style12" colspan="2">
             <asp:TextBox ID="txtEventLocation" runat="server"></asp:TextBox>
         </td>
@@ -148,22 +148,17 @@
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style6">Event Time:&nbsp; </td>
+        <td class="auto-style6"><span class="auto-style28">*</span>Interest/Keyword:&nbsp; </td>
         <td class="auto-style12" colspan="2">
-            <asp:TextBox ID="txtEventTime" runat="server" ForeColor="#33CC33">HH:MM</asp:TextBox>
-        </td>
-        <td class="auto-style30">
-            <asp:DropDownList ID="ddlAmPm" runat="server">
-                <asp:ListItem>am</asp:ListItem>
-                <asp:ListItem>pm</asp:ListItem>
-            </asp:DropDownList>
-        </td>
-    </tr>
-    <tr>
-        <td class="auto-style10"><span class="auto-style28">*</span>Interest/Keyword:&nbsp; </td>
-        <td class="auto-style13" colspan="2">
             <asp:TextBox ID="txtKeyWord" runat="server"></asp:TextBox>
         </td>
+        <td class="auto-style30">
+            &nbsp;</td>
+    </tr>
+    <tr>
+        <td class="auto-style10">&nbsp; </td>
+        <td class="auto-style13" colspan="2">
+            &nbsp;</td>
         <td class="auto-style11">
             &nbsp;</td>
     </tr>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace livinitup
 {
@@ -30,15 +32,38 @@ namespace livinitup
 
                 String eventName = txtEventName.Text;
                 String eventDate = txtEventDate.Text;
-                String eventTime = txtEventTime.Text;
-                String eventLocation = txtEventLocation.Text;
-                String amPm = ddlAmPm.SelectedValue;
+                String eventZipCode = txtEventLocation.Text;
+                if (eventZipCode.Length != 5)
+                    throw new Exception("Enter a valid Zip Code. ex 12345");
                 String keyword = txtKeyWord.Text;
                 bool vir = cbxVirtual.Checked;
                 bool priv = cbxPrivate.Checked;
                 String eventDescription = txtEventDescription.Text;
 
                 btnCreateEvent.Text = "Success!";
+
+                //Add event info to Database
+                SqlConnection conn = null;
+                try
+                {
+                    string connString =
+                    ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                    conn = new SqlConnection(connString);
+                    var query = String.Format("INSERT INTO [Event] ([EventName], [Description], [ZipCode]) VALUES('{0}', '{1}', '{2})", 
+                        eventName, eventDescription, eventZipCode);
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    // handle error here
+                    lblError.Text = "Error: " + ex.Message;
+                }
+                finally
+                {
+                    conn.Close();
+                }
             }
             catch
             {

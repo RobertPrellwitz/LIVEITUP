@@ -60,24 +60,6 @@ namespace livinitup
         protected global::System.Web.UI.WebControls.TextBox txtEventLocation;
 
         /// <summary>
-        /// txtEventTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEventTime;
-
-        /// <summary>
-        /// ddlAmPm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAmPm;
-
-        /// <summary>
         /// txtKeyWord control.
         /// </summary>
         /// <remarks>

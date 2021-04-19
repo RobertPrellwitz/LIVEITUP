@@ -91,9 +91,9 @@ h1, h2, h3, h4, h5, h6 {
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                             <asp:BoundField DataField="Type" HeaderText="Event" SortExpression="Type" />
                             <asp:BoundField DataField="Type1" HeaderText="Interest" SortExpression="Type1" />
+                            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />

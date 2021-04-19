@@ -35,7 +35,7 @@ namespace livinitup
                 }
 
                 String eventName = txtEventName.Text;
-                String eventDate = txtEventDate.Text;
+                String eventDate = txtEventDate.Text +" "+ txtTime.Text;
                 String eventZipCode = txtEventLocation.Text;
                 if (eventZipCode.Length != 5)
                     throw new Exception("Enter a valid Zip Code. ex 12345");
@@ -44,7 +44,7 @@ namespace livinitup
                 bool priv = cbxPrivate.Checked;
                 String eventDescription = txtEventDescription.Text;
                 //int userID = 2;
-                int interestID = 1;
+                int interestID = ddlinterest.SelectedIndex + 1;
 
                 btnCreateEvent.Text = "Success!";
 
@@ -70,6 +70,7 @@ namespace livinitup
                 finally
                 {
                     conn.Close();
+
                 }
             }
             catch

@@ -96,6 +96,15 @@
             text-align: left;
             width: 268435376px;
         }
+    .auto-style31 {
+        font-family: "Segoe UI";
+        color: #FF0000;
+        border-left-color: #A0A0A0;
+        border-right-color: #C0C0C0;
+        border-top-color: #A0A0A0;
+        border-bottom-color: #C0C0C0;
+        padding: 1px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="UniqueContent1" runat="server">
@@ -133,11 +142,19 @@
     <tr>
         <td class="auto-style6"><span class="auto-style28">*</span>Event Date:&nbsp; </td>
         <td class="auto-style12" colspan="2">
-            <asp:TextBox ID="txtEventDate" runat="server" ForeColor="#33CC33">mm/dd/yyyy</asp:TextBox>
+            <asp:TextBox ID="txtEventDate" runat="server" ForeColor="#33CC33" TextMode="Date"></asp:TextBox>
         </td>
         <td class="auto-style30">
             <asp:Label ID="lblDateError" runat="server" ForeColor="Red"></asp:Label>
         </td>
+    </tr>
+    <tr>
+        <td class="auto-style6">Event Time:</td>
+        <td class="auto-style12" colspan="2">
+            <asp:TextBox ID="txtTime" runat="server" TextMode="Time"></asp:TextBox>
+        </td>
+        <td class="auto-style30">
+            &nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style6"><span class="auto-style28">*</span>Event Zipcode:&nbsp; </td>
@@ -156,9 +173,12 @@
             &nbsp;</td>
     </tr>
     <tr>
-        <td class="auto-style10">&nbsp; </td>
+        <td class="auto-style10">&nbsp; <span class="auto-style31">*</span>Interest Type</td>
         <td class="auto-style13" colspan="2">
-            &nbsp;</td>
+            <asp:DropDownList ID="ddlinterest" runat="server" DataSourceID="SqlDataSource2" DataTextField="Type" DataValueField="InterestID">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [InterestID], [Type] FROM [Interest]"></asp:SqlDataSource>
+        </td>
         <td class="auto-style11">
             &nbsp;</td>
     </tr>

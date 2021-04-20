@@ -1,0 +1,1 @@
+﻿INSERT INTO [Event] ([Type], [Description], [Zip], [InterestID], [UserID]) VALUES('Party', 'Fun', 53209, 1, 2)

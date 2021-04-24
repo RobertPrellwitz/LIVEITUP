@@ -51,6 +51,15 @@ namespace livinitup
         protected global::System.Web.UI.WebControls.Label lblDateError;
 
         /// <summary>
+        /// txtTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTime;
+
+        /// <summary>
         /// txtEventLocation control.
         /// </summary>
         /// <remarks>
@@ -60,31 +69,22 @@ namespace livinitup
         protected global::System.Web.UI.WebControls.TextBox txtEventLocation;
 
         /// <summary>
-        /// txtKeyWord control.
+        /// ddlinterest control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeyWord;
+        protected global::System.Web.UI.WebControls.DropDownList ddlinterest;
 
         /// <summary>
-        /// cbxVirtual control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxVirtual;
-
-        /// <summary>
-        /// cbxPrivate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbxPrivate;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
 
         /// <summary>
         /// txtEventDescription control.

@@ -19,8 +19,8 @@ namespace livinitup
         protected void Page_Load(object sender, EventArgs e)
         {
             //initialize calender dates to include all upcoming and recent events +-20yrs
-            calStartDate.SelectedDate = DateTime.Today.AddYears(-20);
-            calEndDate.SelectedDate = DateTime.Today.AddYears(20);
+            //calStartDate.SelectedDate = DateTime.Today.AddYears(-20);
+            //calEndDate.SelectedDate = DateTime.Today.AddYears(20);
 
         }
 
@@ -51,12 +51,12 @@ namespace livinitup
                 string connString =
                 ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                 conn = new SqlConnection(connString);
-                string query = "SELECT [Date], [Description], [Type], [Zip] FROM [Event]";
+                string query = "SELECT Event.Date as 'Date', Event.Description as 'Description', Event.Type as 'Event', Interest.Type as 'Category', Event.Zip as 'Zip' FROM [Event], [interest]";
 
                 //Add zip search restriction to query
                 if (zipString.Length != 0)
                 {
-                    query += " WHERE Zip = " + zipString;
+                    query += " WHERE Event.Zip = " + zipString;
                     zipAdded = true;
                 }
 
@@ -65,9 +65,9 @@ namespace livinitup
                 {
                     typeAdded = true;
                     if (zipAdded)
-                        query += " AND Type LIKE '%" + txtEventSearchType.Text + "%'";
+                        query += " AND (Event.Type LIKE '%" + txtEventSearchType.Text + "%' or Interest.Type LIKE '%" + txtEventSearchType.Text + "%') and Event.InterestID = Interest.InterestID";
                     else
-                        query += " WHERE Type LIKE '%" + txtEventSearchType.Text + "%'";
+                        query += "WHERE Event.Type LIKE '%" + txtEventSearchType.Text + "%' or Interest.Type LIKE '%" + txtEventSearchType.Text + "%' and Event.InterestID = Interest.InterestID";
                 }
 
                 //Add date search restriction to query -NOT WORKING PROPERLY

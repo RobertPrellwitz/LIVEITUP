@@ -19,8 +19,8 @@ namespace livinitup
         protected void Page_Load(object sender, EventArgs e)
         {
             //initialize calender dates to include all upcoming and recent events +-20yrs
-            calStartDate.SelectedDate = DateTime.Today.AddYears(-20);
-            calEndDate.SelectedDate = DateTime.Today.AddYears(20);
+            //calStartDate.SelectedDate = DateTime.Today.AddYears(-20);
+            //calEndDate.SelectedDate = DateTime.Today.AddYears(20);
 
         }
 

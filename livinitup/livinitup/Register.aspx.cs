@@ -60,7 +60,7 @@ namespace livinitup
                     cmd.CommandType = CommandType.Text;
                     cmd.ExecuteNonQuery();
                     cmd.Dispose();
-
+                    conn.Close();
                     Response.Redirect("Login.aspx");
 
 
@@ -69,6 +69,7 @@ namespace livinitup
                     lblError.Text = "Error Occured: " + except.Message;
                     
                 }
+                
 
 
                
